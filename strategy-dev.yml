@@ -8,9 +8,8 @@ spring:
       # 实现手动ACK
       rabbit:
         bindings:
-          myMessage:
-            pre_send_sms_topic:
-              acknowledgeMode: MANUAL
+          pre_send_sms_topic:
+            acknowledgeMode: MANUAL
   rabbitmq:
     port: 5672
     username: admin
