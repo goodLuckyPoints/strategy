@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        #防止重复队列存在重复消息
+        TOPIC_PRE_SEND:                # 队列名称
+          group: TOPIC_PRE_SEND        # 队列组名称
+      # 实现手动ACK
+      rabbit:
+        bindings:
+          myMessage:
+            TOPIC_PRE_SEND:
+              acknowledgeMode: MANUAL
+  rabbitmq:
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: admin
+    host: 192.168.194.139
+    
+server:
+  port: 1234
