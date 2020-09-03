@@ -16,6 +16,6 @@ spring:
     username: admin
     password: admin
     virtual-host: admin
-    host: 192.168.194.139    
+    host: 192.168.194.140   
 server:
   port: 1234
